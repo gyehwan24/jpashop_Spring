@@ -2,6 +2,7 @@ package jpabook.jpashop.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -20,6 +21,8 @@ public class Member {
     @Embedded
     private Address address;
 
-    @OneToMany
+    @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
+
+
 }
