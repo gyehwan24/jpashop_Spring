@@ -1,4 +1,4 @@
 package jpabook.jpashop.domain;
 
-public class Item {
+public enum DeliveryStatus {
 }

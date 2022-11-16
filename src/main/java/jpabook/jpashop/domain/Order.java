@@ -16,15 +16,19 @@ public class Order {
     @Column(name = "order_id")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "member_id")
+    @ManyToOne  //Order 입장에서 Member와 다대일관계
+    @JoinColumn(name = "member_id")  //FK가 member_id
     private Member member;
 
+    @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 
+    @OneToOne
+    @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
-    private LocalDateTime orderDate;
+    private LocalDateTime orderDate;  //주문시간
 
-    private OrderStatus status;
+    @Enumerated(EnumType.STRING)
+    private OrderStatus status;  //주문상태 [ORDER,CANCEL]
 }
