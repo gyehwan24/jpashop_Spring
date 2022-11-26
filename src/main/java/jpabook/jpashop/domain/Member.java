@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.http.converter.json.GsonBuilderUtils;
 
-import javax.persistence.*;
+import javax. persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +23,5 @@ public class Member {
 
     @OneToMany(mappedBy = "member")  //일대다 관계 mappedBy -> 연관관계의 주인이 아니라는 뜻
     private List<Order> orders = new ArrayList<>();
-
 
 }
