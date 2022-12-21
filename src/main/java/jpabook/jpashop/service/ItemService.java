@@ -28,6 +28,7 @@ public class ItemService {
 //        findItem.setPrice(price);
 //        findItem.setName(name);
 //        findItem.setStockQuantity(stockQuantity);
+        //위의 코드 보다는 추적이 가능하도록 함수를 따로 만들어 setter를 쓰지 않도록 한다.
         findItem.change(name, price, stockQuantity);
     }
 
