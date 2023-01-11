@@ -39,7 +39,7 @@ public class Order {
 
     //==연관관계 편의 메소드==// 양방향 관계일때 사용하면 좋음.
     public void setMember(Member member) {
-        member = member;
+        this.member = member;
         member.getOrders().add(this);
     }
 
